@@ -1,0 +1,12 @@
+> assignment2 <- c(16, 18, 14, 22, 27, 17, 19, 17, 17, 22, 20, 22)
+> myMean <- function(assignment2) {
++     return(sum(assignment2)/length(assignment2))
++ }
+> 
+> myMean(assignment2)
+[1] 19.25
+
+
+#The R code that is being used is essentially an unshortened version of myMean <- mean(assignment2) and fully utilizes the function argument, the first line sets up the 
+function to be paired with the object "assignment2" while the second line assigns the function to give the mean with dividing the sum and the length of "assignment2" 
+giving the result on line 7, 19.25.
