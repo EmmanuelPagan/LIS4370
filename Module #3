@@ -1,0 +1,41 @@
+> Name <- c("Jeb", "Donald", "Ted", "Marco", "Carly", "Hillary", "Berine")
+> "ABC political poll results" <- c(4, 62, 51, 21, 2, 14, 15)
+> "CBS political poll results" <- c(12, 75, 43, 19, 1, 21, 19)
+> data.frame(`ABC political poll results`)
+  ABC.political.poll.results
+1                          4
+2                         62
+3                         51
+4                         21
+5                          2
+6                         14
+7                         15
+> data.frame(`CBS political poll results`)
+  CBS.political.poll.results
+1                         12
+2                         75
+3                         43
+4                         19
+5                          1
+6                         21
+7                         19
+> summary(`ABC political poll results`)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   2.00    9.00   15.00   24.14   36.00   62.00 
+> summary(`CBS political poll results`)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+   1.00   15.50   19.00   27.14   32.00   75.00 
+   > df <- data.frame(Name, `ABC political poll results`, `CBS political poll results`)
+> df
+     Name ABC.political.poll.results CBS.political.poll.results
+1     Jeb                          4                         12
+2  Donald                         62                         75
+3     Ted                         51                         43
+4   Marco                         21                         19
+5   Carly                          2                          1
+6 Hillary                         14                         21
+7  Berine                         15                         19
+   
+   
+   ## BY USING THE FUNCTION "DATA.FRAMES", I MADE BOTH THE POLL RESULTS INTO ONE DATA FRAME AS SEEN ABOVE. I ALSO CREATED TWO SEPARATE SIMPLE DATA FRAMES TO EXCERISE 
+   THE FUNCTION BY MYSELF. THE MEANS FOR BOTH DATA FRAMES WERE EASILY OBTAINED BY USING THE SUMMARY FUNCTION THAT ALSO GIVES ME THE MEDIAN, MODE, ETC.
