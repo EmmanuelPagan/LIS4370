@@ -1,0 +1,26 @@
+Freq <- c(0.6, 0.3, 0.4, 0.4, 0.2, 0.6, 0.3, 0.4, 0.9, 0.2)
+
+bloodp <- c(103, 87, 32, 42, 59, 109, 78, 205, 135, 176)
+
+first <- c(1,1,1,1,0,0,0,0,NA,1)
+
+second <- c(0,0,1,1,0,0,1,1,1,1)
+
+final_decision <- c(0,1,0,1,0,1,0,1,1,1)
+
+mean(final_decision)
+
+PatientData <- data.frame(Freq, bloodp, first, second, finaldecision)
+
+PatientData
+
+
+FirstAssessBoxplot <- boxplot(bloodp ~ first, PatientData, main = "First Assessment by Doctor", xlab= "First Assessment", ylab = "Blood Pressure")
+
+SecondAssessBoxplot <- boxplot(bloodp ~ second, PatientData, main= "Second Assessment by External Doctors", xlab = "Second Assessment", ylab = "Blood Pressure" )
+
+ThirdAssessBoxplot <- boxplot(bloodp ~ finaldecision, PatientData, main = "Final Assessment by Head Emergency Unit", xlab = "Final Assessment", ylab = "Blood Pressure")
+
+PatientHistogram <- hist(PatientData$bloodp, main = "Patient Blood Pressure", xlab = "Blood Pressure", ylab = "Hospital Frequency of Visits")
+
+#The more frequent a patient is, the more likely they are to have an average bloodpressure instead of a low or high one. The mean of the final decision ratings is 0.6.
