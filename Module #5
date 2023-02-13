@@ -1,0 +1,24 @@
+A <- matrix(1:100, nrow = 10)
+B <- matrix(1:1000, nrow = 10)
+#Transpose both of the matricies
+A <- t(A)
+B <- t(B)
+#A = 10 x 10 while B = 100 x 10 is the result after transposing
+A 
+B
+B %*% A 
+# create vectors to multiply the matricies
+a = c(1,5)
+b <- c(7, 3)
+a * A
+b * B
+#Assign vectors to match the amount of rows each column has for each matrix
+a <- c(a * A[1,])
+b <- c(b * B[1,])
+a
+b
+#Inverse the matrix
+S <- matrix(solve(A))
+det(A)
+
+#It gives an error due to there being no inverse for A
