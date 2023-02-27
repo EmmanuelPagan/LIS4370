@@ -1,0 +1,36 @@
+mtcars
+summary(mtcars)
+head(mtcars)
+str(mtcars)
+list(mtcars)
+
+#S3 assignment
+data(mtcars)
+mtcarsS3 <- "S3"
+mtcars <- list(data = mtcars)
+class(mtcars) <- mtcarsS3
+
+summary.mtcarsS3 <- function(x, ...) {
+  summary(x$data, ...)
+}
+
+summary(mtcars)
+
+#S4 assignment
+
+data(mtcars)
+mtcarsS4<-"mtcarsS4"
+setClass("mtcarsS4", slots = list(data = "data.frame"))
+mycars_obj <- new("mtcarsS4", data = mtcars)
+setMethod("summary", "mtcarsS4", function(object) summary(object@data))
+
+#s3 vs s4
+s3 <- list(name = "joe", height = 69.6, age = 21, weight = 150)
+
+setClass("joe", slots = list(name = "character", height = "numeric", age = "numeric", weight = "numeric"))
+    
+s4 <-   new("joe", height = 69.6, age = 21, weight = 150)
+s4
+
+
+
