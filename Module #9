@@ -1,0 +1,9 @@
+primates <- read.csv("C:/Users/manny/Downloads/primates.csv")
+View(primates)
+library(ggplot2)
+
+ggplot(primates, aes(x= Bodywt, y = Brainwt)) + geom_col(fill = "pink") + xlab("Body Weight") + ylab("Brain Weight") + ggtitle("body vs brain weight")
+
+plot(primates$Bodywt, primates$Brainwt, col = "black", main = "body vs brain weight", xlab = "body weight", ylab = "brain weighted")
+
+ggplot(primates, aes(x = Bodywt, y = Brainwt)) + geom_point(aes(color = Brainwt))
