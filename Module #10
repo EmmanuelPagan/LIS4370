@@ -1,0 +1,10 @@
+Package: DataScrambler
+Type: Package
+Title: Scrambles or Orders the Data Set Provided
+Version: 0.1.0
+Author: Emmanuel Pagan
+Maintainer: Emmanuel Pagan <emmanuelpagan@usf.edu>
+Description: Provides functions that enable data sets to be randomized, sorted, or edited.
+License: CC0
+Encoding: UTF-8
+LazyData: true
