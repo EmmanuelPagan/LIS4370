@@ -1,0 +1,32 @@
+---
+title: 'Module #12'
+author: "Emmanuel Pagan"
+date: "4/03/2023"
+output: html_document
+---
+  
+  ```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown Document
+
+
+# Step 1 - Load mtcars with ggplot2
+
+```{r, Step 1} 
+library(ggplot2)
+df <- mtcars
+```
+# Step 2 - Show Structure of mtcars
+
+```{r, Step 2}
+str(df)
+head(df)
+```
+# Step 3 - Make Plot of MPG compared to Horsepower
+```{r, Step 3}
+ggplot(df, aes(x = mpg, y = hp)) + geom_point(aes(color = "blue")) + labs(x = "mpg", y = "horsepower", title = "mpg x hp")
+```
+
+
