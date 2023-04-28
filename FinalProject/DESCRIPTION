@@ -1,0 +1,10 @@
+Package: FinalProject
+Type: Package
+Title: Is It Prime?
+Version: 0.1.0
+Author: Who wrote it
+Maintainer: The package maintainer <yourself@somewhere.net>
+Description: This package is designed for finding out whether or not that super long integer that was created is prime or not. This is a particuliarly niche need but someone out there might need it. 
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
